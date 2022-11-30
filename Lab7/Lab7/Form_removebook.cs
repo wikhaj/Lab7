@@ -29,11 +29,18 @@ namespace Lab7
         {
             int id = getID();
 
-            Program.book_list.RemoveAt(id); //i+1
-            form1.dataGridView2.Rows.RemoveAt(id); //i+1*/
+            string selected_book = this.comboBox1.SelectedItem.ToString();
+            string[] sel_book = selected_book.Split(' ');
+            int book_id = Int32.Parse(sel_book[0]);
+
+            int index = Program.book_list.FindIndex(a => a.ID == id) + 1;
+
+            Program.book_list.RemoveAt(index); //i+1
+            form1.dataGridView2.Rows.RemoveAt(index); //i+1*/
 
             form1.dataGridView2.Update();
             this.Close();
+
 
         }
         public int getID()

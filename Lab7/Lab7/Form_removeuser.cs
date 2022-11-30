@@ -36,15 +36,12 @@ namespace Lab7
 
         private void button_delete_Click(object sender, EventArgs e)
         {
-/*            string selected_person = this.comboBox1.SelectedItem.ToString();
+            string selected_person = this.comboBox1.SelectedItem.ToString();
             string[] sel_pers = selected_person.Split(' ');
             int person_id = Int32.Parse(sel_pers[0]);
 
-            User usr = Program.user_list.Find(e => e.ID == person_id);
-
-
             int id = getID();
-            int index = Program.user_list.FindIndex(a => id == usr.ID);*/
+            int index = Program.user_list.FindIndex(a => a.ID == id)+1;
 
             Program.user_list.RemoveAt(index); //i+1
             form1.dataGridView1.Rows.RemoveAt(index); //i+1*/
